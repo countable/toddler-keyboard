@@ -46,7 +46,7 @@ const handle_key = function(e) {
     word = words[Math.floor(Math.random() * words.length)];
     var is_for = " is for " + word;
     var script = document.createElement('script');
-    script.src = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=draw_pics&tags=" + word +
+    script.src = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=draw_pics&tags=" + word +
       "&tagmode=any&per_page=1&sort=relevance&format=json&";
     document.getElementsByTagName('head')[0].appendChild(script);
   } else {
