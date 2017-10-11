@@ -34,10 +34,11 @@ const handle_key = function(e) {
     draw_pics(last_pics);
     return;
   }
-  key_avail = false;
 
   var letter = String.fromCharCode(e.which);
   if (!/[a-zA-Z\d]/.test(letter)) return;
+
+  key_avail = false;
   document.getElementById('letter').innerHTML = letter;
 
   var words = WORDS_BY_FIRST_LETTER[letter.toLowerCase()];
